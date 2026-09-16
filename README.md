@@ -13,3 +13,7 @@ A GitHub Pages-ready static personal website built with HTML, CSS, JavaScript, a
 - title-based `.html` files — individual articles
 
 The homepage slider advances automatically every 10 seconds.
+
+
+## Flat file structure
+All CSS, JavaScript, and image files are stored in the same root folder as `index.html`.

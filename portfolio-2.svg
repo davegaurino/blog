@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="900" viewBox="0 0 1600 900">
+    <defs>
+      <linearGradient id="g" x1="0" y1="0" x2="1" y2="1">
+        <stop offset="0%" stop-color="#8b5cf6"/>
+        <stop offset="100%" stop-color="#4c1d95"/>
+      </linearGradient>
+      <filter id="blur"><feGaussianBlur stdDeviation="22"/></filter>
+    </defs>
+    <rect width="1600" height="900" fill="url(#g)"/>
+    <circle cx="1320" cy="160" r="240" fill="white" opacity=".12"/>
+    <circle cx="200" cy="760" r="300" fill="white" opacity=".08"/>
+    <g opacity=".18" fill="none" stroke="white" stroke-width="3">
+      <path d="M0 680 C280 560, 480 850, 760 660 S1260 500,1600 650"/>
+      <path d="M0 735 C280 615, 480 905, 760 715 S1260 555,1600 705"/>
+    </g>
+    <text x="120" y="310" font-family="Arial, sans-serif" font-size="84" font-weight="700" fill="white">02</text>
+    <text x="120" y="430" font-family="Arial, sans-serif" font-size="84" font-weight="700" fill="white">Branding</text>
+    <text x="120" y="510" font-family="Arial, sans-serif" font-size="34" fill="white" opacity=".9">Simple visual systems</text>
+    </svg>
