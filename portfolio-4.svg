@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="900" viewBox="0 0 1200 900">
+  <defs><linearGradient id="g" x1="0" y1="0" x2="1" y2="1"><stop offset="0%" stop-color="#2563eb"/><stop offset="100%" stop-color="#0f172a"/></linearGradient></defs>
+  <rect width="1200" height="900" fill="url(#g)"/>
+  <circle cx="1015" cy="145" r="225" fill="#fff" opacity=".10"/>
+  <circle cx="175" cy="775" r="265" fill="#fff" opacity=".07"/>
+  <g fill="none" stroke="#fff" stroke-width="4" opacity=".18">
+    <rect x="665" y="235" width="360" height="235" rx="18"/>
+    <rect x="710" y="525" width="250" height="145" rx="14"/>
+    <path d="M735 310h220M735 350h160M735 390h190"/>
+    <circle cx="755" cy="575" r="24"/><path d="M800 570h105M800 610h75"/>
+  </g>
+  <text x="85" y="315" font-family="Arial, sans-serif" font-size="72" font-weight="700" fill="#fff">04</text>
+  <text x="85" y="430" font-family="Arial, sans-serif" font-size="70" font-weight="700" fill="#fff">Web Apps</text>
+  <text x="85" y="505" font-family="Arial, sans-serif" font-size="30" fill="#fff" opacity=".9">Interactive tools and browser-based projects</text>
+</svg>
