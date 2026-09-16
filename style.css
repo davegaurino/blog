@@ -436,3 +436,13 @@ img{max-width:100%;display:block}
   border-left:11px solid #fff;
   margin-right:-2px;
 }
+
+
+/* Read All Posts */
+.read-all-posts{
+  margin-top:10px;
+  text-align:center;
+}
+.read-all-posts a{
+  font-weight:700;
+}
