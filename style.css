@@ -812,244 +812,186 @@ img{max-width:100%;display:block}
   }
 }
 
-
-/* God's Will homepage featured card */
-.gods-will-featured-card{
+/* Odd / Even homepage post backgrounds */
+.Odd-Post,
+.Even-Post{
   position:relative;
   overflow:hidden;
+  border-color:rgba(255,255,255,.10);
+  color:#fff;
+  isolation:isolate;
+}
+
+/* Shared text treatment: identical for Odd and Even cards */
+.Odd-Post .post-meta,
+.Even-Post .post-meta{
+  position:relative;
+  z-index:2;
+  color:rgba(255,255,255,.80);
+}
+.Odd-Post h3,
+.Even-Post h3,
+.Odd-Post p,
+.Even-Post .read-more{
+  position:relative;
+  z-index:2;
+}
+.Odd-Post h3 a,
+.Even-Post h3 a{
+  color:#fff;
+}
+.Odd-Post h3 a:hover,
+.Even-Post h3 a:hover{
+  color:#fff;
+  text-decoration:underline;
+}
+.Odd-Post p,
+.Even-Post p{
+  color:rgba(255,255,255,.92);
+}
+.Odd-Post .read-more,
+.Even-Post .read-more{
+  color:#fff;
+}
+.Odd-Post .read-more:hover,
+.Even-Post .read-more:hover{
+  color:#fff;
+  text-decoration:underline;
+}
+
+/* Odd-Post gradient */
+.Odd-Post{
+  --overlay-left:rgba(7,20,35,.94);
+  --overlay-mid:rgba(7,20,35,.92);
+  --overlay-right:rgba(7,20,35,.90);
   background:
+    linear-gradient(90deg,var(--overlay-left) 0%,var(--overlay-mid) 50%,var(--overlay-right) 100%);
+}
+
+/* Even-Post gradient */
+.Even-Post{
+  --overlay-left:rgba(22,47,104,.94);
+  --overlay-mid:rgba(19,38,81,.92);
+  --overlay-right:rgba(17,29,57,.90);
+  background:
+    linear-gradient(90deg,var(--overlay-left) 0%,var(--overlay-mid) 50%,var(--overlay-right) 100%);
+}
+
+/* Featured photos sit a few pixels inside the gradient edge. */
+.Odd-Post.gods-will-bg::before,
+.Odd-Post.friends-bg::before,
+.Odd-Post.productive-bg::before,
+.Even-Post.dreams-bg::before,
+.Even-Post.money-bg::before{
+  content:"";
+  position:absolute;
+  inset:4px;
+  z-index:0;
+  border-radius:6px;
+  background-position:center center;
+  background-size:cover;
+  background-repeat:no-repeat;
+  pointer-events:none;
+}
+
+/* Add the same gradient treatment over each inset photo. */
+.Odd-Post.gods-will-bg::before,
+.Odd-Post.friends-bg::before,
+.Odd-Post.productive-bg::before{
+  background-image:
+    linear-gradient(90deg,var(--overlay-left) 0%,var(--overlay-mid) 50%,var(--overlay-right) 100%),
+    var(--featured-photo);
+}
+.Even-Post.dreams-bg::before,
+.Even-Post.money-bg::before{
+  background-image:
+    linear-gradient(90deg,var(--overlay-left) 0%,var(--overlay-mid) 50%,var(--overlay-right) 100%),
+    var(--featured-photo);
+}
+
+/* Each post supplies only its own photo. */
+.gods-will-bg{
+  --featured-photo:url("how-to-know-gods-will-featured.png");
+}
+.friends-bg{
+  --featured-photo:url("how-to-choose-the-right-friends-featured.png");
+}
+.productive-bg{
+  --featured-photo:url("how-to-be-productive-featured.png");
+}
+.dreams-bg{
+  --featured-photo:url("how-to-chase-your-dreams-featured.png");
+}
+.money-bg{
+  --featured-photo:url("how-to-make-money-the-right-way-featured.png");
+}
+
+/* Keep all text above the inset photo layer. */
+.Odd-Post > *,
+.Even-Post > *{
+  position:relative;
+  z-index:2;
+}
+
+@media (max-width:680px){
+  .Odd-Post,
+  .Even-Post{
+    background:
+      linear-gradient(180deg,var(--overlay-left) 0%,var(--overlay-mid) 55%,var(--overlay-right) 100%);
+  }
+
+  .Odd-Post.gods-will-bg::before,
+  .Odd-Post.friends-bg::before,
+  .Odd-Post.productive-bg::before,
+  .Even-Post.dreams-bg::before,
+  .Even-Post.money-bg::before{
+    inset:3px;
+    border-radius:7px;
+    background-image:
+      linear-gradient(180deg,var(--overlay-left) 0%,var(--overlay-mid) 55%,var(--overlay-right) 100%),
+      var(--featured-photo);
+  }
+}
+
+/* Blog Archive Odd / Even cards */
+/* Posts without a featured photo use only their Odd/Even gradient. */
+.blog-archive-page .Odd-Post:not(.gods-will-bg):not(.friends-bg):not(.productive-bg){
+  background-image:
     linear-gradient(
       90deg,
       rgba(7,20,35,.94) 0%,
-      rgba(7,20,35,.92) 42%,
-      rgba(7,20,35,.91) 72%,
+      rgba(7,20,35,.92) 50%,
       rgba(7,20,35,.90) 100%
-    ),
-    url("how-to-know-gods-will-featured.png") center center / cover no-repeat;
-  border-color:rgba(255,255,255,.12);
-  color:#fff;
+    );
 }
-.gods-will-featured-card .post-meta{
-  color:rgba(255,255,255,.82);
+.blog-archive-page .Even-Post:not(.dreams-bg):not(.money-bg){
+  background-image:
+    linear-gradient(
+      90deg,
+      rgba(22,47,104,.94) 0%,
+      rgba(19,38,81,.92) 50%,
+      rgba(17,29,57,.90) 100%
+    );
 }
-.gods-will-featured-card h3 a{
-  color:#fff;
-}
-.gods-will-featured-card h3 a:hover{
-  color:#fff;
-  text-decoration:underline;
-}
-.gods-will-featured-card p{
-  color:rgba(255,255,255,.92);
-}
-.gods-will-featured-card .read-more{
-  color:#fff;
-}
-.gods-will-featured-card .read-more:hover{
-  color:#fff;
-  text-decoration:underline;
-}
+
 @media (max-width:680px){
-  .gods-will-featured-card{
-    background:
+  .blog-archive-page .Odd-Post:not(.gods-will-bg):not(.friends-bg):not(.productive-bg){
+    background-image:
       linear-gradient(
         180deg,
         rgba(7,20,35,.94) 0%,
-        rgba(7,20,35,.92) 58%,
+        rgba(7,20,35,.92) 55%,
         rgba(7,20,35,.90) 100%
-      ),
-      url("how-to-know-gods-will-featured.png") center center / cover no-repeat;
+      );
+  }
+  .blog-archive-page .Even-Post:not(.dreams-bg):not(.money-bg){
+    background-image:
+      linear-gradient(
+        180deg,
+        rgba(22,47,104,.94) 0%,
+        rgba(19,38,81,.92) 55%,
+        rgba(17,29,57,.90) 100%
+      );
   }
 }
 
-/* Dreams homepage featured card */
-.dreams-featured-card{
-  position:relative;
-  overflow:hidden;
-  background:
-    linear-gradient(
-      90deg,
-      rgba(255,255,255,.96) 0%,
-      rgba(255,255,255,.94) 50%,
-      rgba(255,255,255,.92) 100%
-    ),
-    url("how-to-chase-your-dreams-featured.png") center center / cover no-repeat;
-  border-color:var(--border);
-  color:var(--text);
-}
-.dreams-featured-card .post-meta{
-  color:#646970;
-}
-.dreams-featured-card h3 a{
-  color:var(--accent);
-}
-.dreams-featured-card h3 a:hover{
-  color:var(--accent-dark);
-  text-decoration:underline;
-}
-.dreams-featured-card p{
-  color:#343a40;
-}
-.dreams-featured-card .read-more{
-  color:var(--accent);
-}
-.dreams-featured-card .read-more:hover{
-  color:var(--accent-dark);
-  text-decoration:underline;
-}
-@media (max-width:680px){
-  .dreams-featured-card{
-    background:
-      linear-gradient(
-        180deg,
-        rgba(255,255,255,.94) 0%,
-        rgba(255,255,255,.92) 100%
-      ),
-      url("how-to-chase-your-dreams-featured.png") center center / cover no-repeat;
-  }
-}
-
-/* Friends homepage featured card */
-.friends-featured-card{
-  position:relative;
-  overflow:hidden;
-  background:
-    linear-gradient(
-      90deg,
-      rgba(7,20,35,.94) 0%,
-      rgba(7,20,35,.92) 42%,
-      rgba(7,20,35,.91) 72%,
-      rgba(7,20,35,.90) 100%
-    ),
-    url("how-to-choose-the-right-friends-featured.png") center center / cover no-repeat;
-  border-color:rgba(255,255,255,.12);
-  color:#fff;
-}
-.friends-featured-card .post-meta{
-  color:rgba(255,255,255,.82);
-}
-.friends-featured-card h3 a{
-  color:#fff;
-}
-.friends-featured-card h3 a:hover{
-  color:#fff;
-  text-decoration:underline;
-}
-.friends-featured-card p{
-  color:rgba(255,255,255,.92);
-}
-.friends-featured-card .read-more{
-  color:#fff;
-}
-.friends-featured-card .read-more:hover{
-  color:#fff;
-  text-decoration:underline;
-}
-@media (max-width:680px){
-  .friends-featured-card{
-    background:
-      linear-gradient(
-        180deg,
-        rgba(7,20,35,.94) 0%,
-        rgba(7,20,35,.92) 58%,
-        rgba(7,20,35,.90) 100%
-      ),
-      url("how-to-choose-the-right-friends-featured.png") center center / cover no-repeat;
-  }
-}
-
-/* Money homepage featured card */
-.money-featured-card{
-  position:relative;
-  overflow:hidden;
-  background:
-    linear-gradient(
-      90deg,
-      rgba(255,255,255,.96) 0%,
-      rgba(255,255,255,.94) 50%,
-      rgba(255,255,255,.92) 100%
-    ),
-    url("how-to-make-money-the-right-way-featured.png") center center / cover no-repeat;
-  border-color:var(--border);
-  color:var(--text);
-}
-.money-featured-card .post-meta{
-  color:#646970;
-}
-.money-featured-card h3 a{
-  color:var(--accent);
-}
-.money-featured-card h3 a:hover{
-  color:var(--accent-dark);
-  text-decoration:underline;
-}
-.money-featured-card p{
-  color:#343a40;
-}
-.money-featured-card .read-more{
-  color:var(--accent);
-}
-.money-featured-card .read-more:hover{
-  color:var(--accent-dark);
-  text-decoration:underline;
-}
-@media (max-width:680px){
-  .money-featured-card{
-    background:
-      linear-gradient(
-        180deg,
-        rgba(255,255,255,.94) 0%,
-        rgba(255,255,255,.92) 100%
-      ),
-      url("how-to-make-money-the-right-way-featured.png") center center / cover no-repeat;
-  }
-}
-
-/* Productive homepage featured card */
-.productive-featured-card{
-  position:relative;
-  overflow:hidden;
-  background:
-    linear-gradient(
-      90deg,
-      rgba(7,20,35,.94) 0%,
-      rgba(7,20,35,.92) 42%,
-      rgba(7,20,35,.91) 72%,
-      rgba(7,20,35,.90) 100%
-    ),
-    url("how-to-be-productive-featured.png") center center / cover no-repeat;
-  border-color:rgba(255,255,255,.12);
-  color:#fff;
-}
-.productive-featured-card .post-meta{
-  color:rgba(255,255,255,.82);
-}
-.productive-featured-card h3 a{
-  color:#fff;
-}
-.productive-featured-card h3 a:hover{
-  color:#fff;
-  text-decoration:underline;
-}
-.productive-featured-card p{
-  color:rgba(255,255,255,.92);
-}
-.productive-featured-card .read-more{
-  color:#fff;
-}
-.productive-featured-card .read-more:hover{
-  color:#fff;
-  text-decoration:underline;
-}
-@media (max-width:680px){
-  .productive-featured-card{
-    background:
-      linear-gradient(
-        180deg,
-        rgba(7,20,35,.94) 0%,
-        rgba(7,20,35,.92) 58%,
-        rgba(7,20,35,.90) 100%
-      ),
-      url("how-to-be-productive-featured.png") center center / cover no-repeat;
-  }
-}
