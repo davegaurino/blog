@@ -795,3 +795,166 @@ img{max-width:100%;display:block}
     padding:18px;
   }
 }
+
+/* Article featured image */
+.post-featured-image{
+  display:block;
+  width:100%;
+  height:auto;
+  margin:18px 0 16px;
+  border-radius:10px;
+  object-fit:cover;
+}
+@media (max-width:680px){
+  .post-featured-image{
+    margin:15px 0 14px;
+    border-radius:8px;
+  }
+}
+
+
+/* God's Will homepage featured card */
+.gods-will-featured-card{
+  position:relative;
+  overflow:hidden;
+  background:
+    linear-gradient(
+      90deg,
+      rgba(7,20,35,.94) 0%,
+      rgba(7,20,35,.82) 42%,
+      rgba(7,20,35,.58) 72%,
+      rgba(7,20,35,.42) 100%
+    ),
+    url("how-to-know-gods-will-featured.png") center center / cover no-repeat;
+  border-color:rgba(255,255,255,.12);
+  color:#fff;
+}
+.gods-will-featured-card .post-meta{
+  color:rgba(255,255,255,.82);
+}
+.gods-will-featured-card h3 a{
+  color:#fff;
+}
+.gods-will-featured-card h3 a:hover{
+  color:#fff;
+  text-decoration:underline;
+}
+.gods-will-featured-card p{
+  color:rgba(255,255,255,.92);
+}
+.gods-will-featured-card .read-more{
+  color:#fff;
+}
+.gods-will-featured-card .read-more:hover{
+  color:#fff;
+  text-decoration:underline;
+}
+@media (max-width:680px){
+  .gods-will-featured-card{
+    background:
+      linear-gradient(
+        180deg,
+        rgba(7,20,35,.76) 0%,
+        rgba(7,20,35,.88) 58%,
+        rgba(7,20,35,.96) 100%
+      ),
+      url("how-to-know-gods-will-featured.png") center center / cover no-repeat;
+  }
+}
+
+/* Dreams homepage featured card */
+.dreams-featured-card{
+  position:relative;
+  overflow:hidden;
+  background:
+    linear-gradient(
+      90deg,
+      rgba(255,255,255,.96) 0%,
+      rgba(255,255,255,.94) 50%,
+      rgba(255,255,255,.92) 100%
+    ),
+    url("how-to-chase-your-dreams-featured.png") center center / cover no-repeat;
+  border-color:var(--border);
+  color:var(--text);
+}
+.dreams-featured-card .post-meta{
+  color:#646970;
+}
+.dreams-featured-card h3 a{
+  color:var(--accent);
+}
+.dreams-featured-card h3 a:hover{
+  color:var(--accent-dark);
+  text-decoration:underline;
+}
+.dreams-featured-card p{
+  color:#343a40;
+}
+.dreams-featured-card .read-more{
+  color:var(--accent);
+}
+.dreams-featured-card .read-more:hover{
+  color:var(--accent-dark);
+  text-decoration:underline;
+}
+@media (max-width:680px){
+  .dreams-featured-card{
+    background:
+      linear-gradient(
+        180deg,
+        rgba(255,255,255,.94) 0%,
+        rgba(255,255,255,.92) 100%
+      ),
+      url("how-to-chase-your-dreams-featured.png") center center / cover no-repeat;
+  }
+}
+
+/* Friends homepage featured card */
+.friends-featured-card{
+  position:relative;
+  overflow:hidden;
+  background:
+    linear-gradient(
+      90deg,
+      rgba(7,20,35,.94) 0%,
+      rgba(7,20,35,.82) 42%,
+      rgba(7,20,35,.58) 72%,
+      rgba(7,20,35,.42) 100%
+    ),
+    url("how-to-choose-the-right-friends-featured.png") center center / cover no-repeat;
+  border-color:rgba(255,255,255,.12);
+  color:#fff;
+}
+.friends-featured-card .post-meta{
+  color:rgba(255,255,255,.82);
+}
+.friends-featured-card h3 a{
+  color:#fff;
+}
+.friends-featured-card h3 a:hover{
+  color:#fff;
+  text-decoration:underline;
+}
+.friends-featured-card p{
+  color:rgba(255,255,255,.92);
+}
+.friends-featured-card .read-more{
+  color:#fff;
+}
+.friends-featured-card .read-more:hover{
+  color:#fff;
+  text-decoration:underline;
+}
+@media (max-width:680px){
+  .friends-featured-card{
+    background:
+      linear-gradient(
+        180deg,
+        rgba(7,20,35,.76) 0%,
+        rgba(7,20,35,.88) 58%,
+        rgba(7,20,35,.96) 100%
+      ),
+      url("how-to-choose-the-right-friends-featured.png") center center / cover no-repeat;
+  }
+}
+
