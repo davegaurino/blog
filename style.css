@@ -911,19 +911,19 @@ img{max-width:100%;display:block}
 
 /* Each post supplies only its own photo. */
 .gods-will-bg{
-  --featured-photo:url("how-to-know-gods-will-featured.png");
+  --featured-photo:url("how-to-know-gods-will-featured.jpg");
 }
 .friends-bg{
-  --featured-photo:url("how-to-choose-the-right-friends-featured.png");
+  --featured-photo:url("how-to-choose-the-right-friends-featured.jpg");
 }
 .productive-bg{
-  --featured-photo:url("how-to-be-productive-featured.png");
+  --featured-photo:url("how-to-be-productive-featured.jpg");
 }
 .dreams-bg{
-  --featured-photo:url("how-to-chase-your-dreams-featured.png");
+  --featured-photo:url("how-to-chase-your-dreams-featured.jpg");
 }
 .money-bg{
-  --featured-photo:url("how-to-make-money-the-right-way-featured.png");
+  --featured-photo:url("how-to-make-money-the-right-way-featured.jpg");
 }
 
 /* Keep all text above the inset photo layer. */
