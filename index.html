@@ -127,7 +127,7 @@
 </div><a class="home-products-all" href="products.html">View Products →</a></section>
 </main>
 <aside class="sidebar">
-<section class="widget">
+<section aria-label="Bible verses of the day" class="widget verse-widget"><h3 class="">Bible Verse of the Day</h3><div aria-live="polite" class="verse-slider"><div class="verse-slide active" data-ready="false" data-verse-source="dailyverses" data-version="NIV"><p aria-hidden="true" class="verse-text"></p><p aria-hidden="true" class="verse-reference"></p></div><div class="verse-slide" data-ready="false" data-verse-source="biblegateway" data-version="NKJV"><p aria-hidden="true" class="verse-text"></p><p aria-hidden="true" class="verse-reference"></p></div><div class="verse-slide" data-ready="false" data-verse-source="christianity" data-version="NIV"><p aria-hidden="true" class="verse-text"></p><p aria-hidden="true" class="verse-reference"></p></div><div class="verse-slider-controls"><button aria-label="Show previous Bible verse" class="verse-slider-arrow verse-slider-prev" type="button"><span aria-hidden="true" class="verse-triangle-icon verse-triangle-left"></span></button><div aria-label="Bible verse navigation" class="verse-slider-dots"><button aria-label="Verse 1" class="verse-slider-dot active" disabled="disabled" type="button"></button><button aria-label="Verse 2" class="verse-slider-dot" disabled="disabled" type="button"></button><button aria-label="Verse 3" class="verse-slider-dot" disabled="disabled" type="button"></button></div><button aria-label="Show next Bible verse" class="verse-slider-arrow verse-slider-next" type="button"><span aria-hidden="true" class="verse-triangle-icon verse-triangle-right"></span></button></div></div></section><section class="widget">
 <h3>About This Site</h3>
 <p>This is my personal space for sharing ideas, writing, projects, and digital work. My articles focus on faith, personal growth, relationships, purpose, work, and practical Christian living, together with selected projects, portfolio work, and products.</p>
 </section>
@@ -162,6 +162,14 @@
 <div><a href="index.html">Home</a> · <a href="about.html">About</a> · <a href="portfolio.html">Portfolio</a> · <a href="products.html">Products</a> · <a href="blog-archive.html">Blog Archive</a></div>
 </div>
 </footer>
-<script src="main.js"></script>
+<div aria-hidden="true" class="verse-source-pool"><div class="verse-source-host" id="dailyVersesWrapper"></div><script async="" defer="" src="https://dailyverses.net/get/verse.js?language=niv"></script><script>
+window.DaveBGVerseCallback = function (data) {
+  var payload = data && (data.votd || data);
+  window.__daveBibleGatewayVerse = payload || null;
+  if (typeof window.DaveRefreshVerseWidget === "function") {
+    window.DaveRefreshVerseWidget();
+  }
+};
+</script><script src="https://www.biblegateway.com/votd/get/?format=json&amp;version=NKJV&amp;callback=DaveBGVerseCallback"></script><div class="verse-source-host" id="christianityVerseSource"><script src="https://www.christianity.com/bible/syndicate.php?content=dbv&amp;type=js2&amp;tw=100%25&amp;tbg=FFFFFF&amp;bw=1&amp;bc=000000&amp;ta=C&amp;tc=000000&amp;tf=Arial&amp;ts=18&amp;ty=&amp;va=L&amp;vc=000000&amp;vf=Arial&amp;vs=12&amp;tt=1&amp;trn=niv" type="text/javascript"></script></div></div><script src="main.js"></script>
 </body>
 </html>

@@ -1737,3 +1737,179 @@ h1,h2,h3,h4{
 .wallpaper-entry + .wallpaper-entry{
   margin-top:32px;
 }
+
+/* Sidebar Bible verse slider */
+.verse-widget{
+  padding:0;
+  overflow:hidden;
+}
+
+.verse-slider{
+  position:relative;
+  min-height:225px;
+  padding:24px 22px 58px;
+}
+
+.verse-slide{
+  display:none;
+  min-height:143px;
+  flex-direction:column;
+  justify-content:center;
+}
+
+.verse-slide.active{
+  display:flex;
+}
+
+.verse-text{
+  margin:0!important;
+  color:#2f414b!important;
+  font-size:1.04rem;
+  line-height:1.72;
+  font-weight:500;
+}
+
+.verse-reference{
+  margin:15px 0 0!important;
+  color:#2f6f89!important;
+  font-size:.82rem!important;
+  line-height:1.4!important;
+  font-weight:700;
+  letter-spacing:.01em;
+}
+
+.verse-slider-controls{
+  position:absolute;
+  left:0;
+  right:0;
+  bottom:12px;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  gap:10px;
+}
+
+.verse-slider-dots{
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  gap:8px;
+}
+
+.verse-slider-dot{
+  width:9px;
+  height:9px;
+  padding:0;
+  border:0;
+  border-radius:50%;
+  background:#b9c8cf;
+  cursor:pointer;
+  transition:transform .18s ease, background .18s ease, opacity .18s ease;
+}
+
+.verse-slider-dot.active{
+  background:#2f6f89;
+  transform:scale(1.25);
+}
+
+.verse-slider-dot:disabled{
+  cursor:default;
+  opacity:.34;
+}
+
+.verse-slider-dot:not(:disabled):hover{
+  background:#24566b;
+}
+
+.verse-slider-arrow{
+  width:34px;
+  height:34px;
+  display:inline-flex;
+  align-items:center;
+  justify-content:center;
+  border:0;
+  border-radius:0;
+  background:transparent;
+  color:#2f6f89;
+  cursor:pointer;
+  padding:0;
+  transition:transform .2s ease, opacity .2s ease;
+}
+
+.verse-slider-arrow:hover{
+  background:transparent;
+  opacity:.72;
+}
+
+.verse-slider-arrow:active{
+  transform:scale(.88);
+}
+
+.verse-slider-arrow:focus-visible,
+.verse-slider-dot:focus-visible{
+  outline:2px solid #2f6f89;
+  outline-offset:3px;
+}
+
+.verse-slider-arrow:disabled{
+  opacity:.28;
+  cursor:default;
+}
+
+.verse-triangle-icon{
+  display:block;
+  width:0;
+  height:0;
+}
+
+.verse-triangle-left{
+  border-top:7px solid transparent;
+  border-bottom:7px solid transparent;
+  border-right:11px solid #2f6f89;
+  margin-left:-2px;
+}
+
+.verse-triangle-right{
+  border-top:7px solid transparent;
+  border-bottom:7px solid transparent;
+  border-left:11px solid #2f6f89;
+  margin-right:-2px;
+}
+
+.verse-source-pool{
+  display:none!important;
+}
+
+@media(max-width:680px){
+  .verse-slider{
+    min-height:210px;
+    padding:22px 20px 56px;
+  }
+
+  .verse-slide{
+    min-height:132px;
+  }
+
+  .verse-text{
+    font-size:1rem;
+  }
+}
+
+@media(prefers-reduced-motion:reduce){
+  .verse-slider-arrow,
+  .verse-slider-dot{
+    transition:none;
+  }
+}
+
+
+
+/* Verse widget title alignment */
+.verse-widget > h3{
+  margin:0;
+  padding:18px 20px 0;
+}
+
+.verse-widget .verse-slider{
+  padding-top:14px;
+}
