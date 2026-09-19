@@ -1,0 +1,23 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="900" viewBox="0 0 1200 900">
+  <defs>
+    <linearGradient id="g" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#0f766e"/>
+      <stop offset="55%" stop-color="#2563eb"/>
+      <stop offset="100%" stop-color="#172554"/>
+    </linearGradient>
+    <linearGradient id="sun" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#fff7cc"/>
+      <stop offset="100%" stop-color="#ffd76a"/>
+    </linearGradient>
+  </defs>
+  <rect width="1200" height="900" fill="url(#g)"/>
+  <circle cx="1000" cy="160" r="220" fill="#fff" opacity=".09"/>
+  <circle cx="930" cy="245" r="70" fill="url(#sun)" opacity=".95"/>
+  <path d="M550 680L760 420L880 555L975 455L1160 680Z" fill="#fff" opacity=".12"/>
+  <path d="M505 700L705 510L825 625L930 530L1125 700Z" fill="#fff" opacity=".18"/>
+  <rect x="675" y="185" width="365" height="410" rx="24" fill="none" stroke="#fff" stroke-width="5" opacity=".28"/>
+  <rect x="725" y="240" width="265" height="300" rx="14" fill="#fff" opacity=".08"/>
+  <text x="85" y="315" font-family="Arial, sans-serif" font-size="72" font-weight="700" fill="#fff">05</text>
+  <text x="85" y="430" font-family="Arial, sans-serif" font-size="70" font-weight="700" fill="#fff">Wallpapers</text>
+  <text x="85" y="505" font-family="Arial, sans-serif" font-size="30" fill="#fff" opacity=".9">Desktop and mobile background designs</text>
+</svg>

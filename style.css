@@ -1612,3 +1612,128 @@ h1,h2,h3,h4{
   }
 }
 
+/* Wallpapers page */
+.wallpaper-page-content{
+  max-width:1100px;
+}
+
+.wallpaper-entry{
+  background:#fcfdfd;
+  border:1px solid #d7e0e4;
+  border-radius:14px;
+  padding:clamp(22px,4vw,38px);
+  box-shadow:0 10px 28px rgba(28,48,61,.07);
+}
+
+.wallpaper-entry h2{
+  margin:0 0 22px;
+  color:#173b4d;
+  font-size:clamp(1.9rem,3.4vw,2.7rem);
+  line-height:1.12;
+  letter-spacing:-.025em;
+}
+
+.wallpaper-image-wrap{
+  overflow:hidden;
+  border-radius:12px;
+  box-shadow:0 10px 26px rgba(28,48,61,.12);
+  margin-bottom:24px;
+}
+
+.wallpaper-image{
+  display:block;
+  width:100%;
+  height:auto;
+}
+
+.wallpaper-description{
+  max-width:900px;
+  margin:0 0 24px;
+  color:#394b55;
+  font-size:1.05rem;
+  line-height:1.75;
+}
+
+.wallpaper-download-btn{
+  display:inline-flex;
+  align-items:center;
+  gap:10px;
+  padding:11px 18px;
+  background:#2f6f89;
+  color:#fff;
+  border-radius:8px;
+  font-weight:700;
+  text-decoration:none;
+  box-shadow:0 4px 12px rgba(47,111,137,.18);
+  transition:background .16s ease, transform .16s ease, box-shadow .16s ease;
+}
+
+.wallpaper-download-btn:hover{
+  background:#24566b;
+  color:#fff;
+  text-decoration:none;
+  transform:translateY(-1px);
+  box-shadow:0 8px 18px rgba(47,111,137,.22);
+}
+
+.download-icon{
+  width:18px;
+  height:18px;
+  flex:0 0 18px;
+}
+
+@media(max-width:680px){
+  .wallpaper-entry{
+    padding:20px;
+    border-radius:10px;
+  }
+
+  .wallpaper-image-wrap{
+    border-radius:9px;
+    margin-bottom:20px;
+  }
+
+  .wallpaper-description{
+    font-size:1rem;
+  }
+
+  .wallpaper-download-btn{
+    width:100%;
+    justify-content:center;
+  }
+}
+
+
+
+/* Wallpaper download button alignment */
+.wallpaper-download-btn{
+  display:flex;
+  width:max-content;
+  margin-left:auto;
+  margin-right:0;
+}
+
+@media(max-width:680px){
+  .wallpaper-download-btn{
+    width:100%;
+    margin-left:0;
+    margin-right:0;
+    justify-content:center;
+  }
+}
+
+
+/* Wallpaper metadata */
+.wallpaper-meta{
+  margin:0 0 8px;
+  color:#6e7f89;
+  font-size:.82rem;
+  line-height:1.4;
+  letter-spacing:.01em;
+}
+
+
+/* Multiple wallpaper spacing */
+.wallpaper-entry + .wallpaper-entry{
+  margin-top:32px;
+}
