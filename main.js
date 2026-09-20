@@ -328,3 +328,69 @@ document.addEventListener("DOMContentLoaded", () => {
   });
 });
 
+/* Homepage wallpaper slider */
+document.addEventListener("DOMContentLoaded", () => {
+  const section = document.querySelector(".home-wallpaper-section");
+  if (!section) return;
+
+  const slides = [...section.querySelectorAll(".home-wallpaper-slide")];
+  const dots = [...section.querySelectorAll(".home-wallpaper-dot")];
+  const prev = section.querySelector(".home-wallpaper-prev");
+  const next = section.querySelector(".home-wallpaper-next");
+
+  if (!slides.length) return;
+
+  let current = Math.max(0, slides.findIndex(slide => slide.classList.contains("active")));
+  let timer = null;
+
+  function showWallpaper(index) {
+    const nextIndex = (index + slides.length) % slides.length;
+
+    slides.forEach((slide, i) => {
+      const active = i === nextIndex;
+      slide.classList.toggle("active", active);
+      slide.setAttribute("aria-hidden", active ? "false" : "true");
+    });
+
+    dots.forEach((dot, i) => {
+      const active = i === nextIndex;
+      dot.classList.toggle("active", active);
+      dot.setAttribute("aria-current", active ? "true" : "false");
+    });
+
+    current = nextIndex;
+  }
+
+  function startWallpaperSlider() {
+    if (slides.length < 2) return;
+    clearInterval(timer);
+    timer = setInterval(() => {
+      showWallpaper(current + 1);
+    }, 10000);
+  }
+
+  dots.forEach((dot, index) => {
+    dot.addEventListener("click", () => {
+      showWallpaper(index);
+      startWallpaperSlider();
+    });
+  });
+
+  prev?.addEventListener("click", () => {
+    showWallpaper(current - 1);
+    startWallpaperSlider();
+  });
+
+  next?.addEventListener("click", () => {
+    showWallpaper(current + 1);
+    startWallpaperSlider();
+  });
+
+  section.addEventListener("mouseenter", () => clearInterval(timer));
+  section.addEventListener("mouseleave", startWallpaperSlider);
+
+  showWallpaper(current);
+  startWallpaperSlider();
+});
+/* End homepage wallpaper slider */
+

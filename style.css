@@ -2117,3 +2117,280 @@ h1,h2,h3,h4{
   margin-left:auto;
   margin-right:auto;
 }
+
+/* Homepage wallpaper slider */
+.home-wallpaper-section{
+  margin-top:38px;
+  margin-bottom:42px;
+}
+
+.home-wallpaper-section > .section-title{
+  margin-bottom:18px;
+}
+
+.home-wallpaper-slider{
+  overflow:hidden;
+  background:#fcfdfd;
+  border:1px solid #d7e0e4;
+  border-radius:12px;
+  box-shadow:0 8px 24px rgba(28,48,61,.06);
+}
+
+.home-wallpaper-slides{
+  position:relative;
+}
+
+.home-wallpaper-slide{
+  display:none;
+}
+
+.home-wallpaper-slide.active{
+  display:block;
+}
+
+.home-wallpaper-image-wrap{
+  overflow:hidden;
+  aspect-ratio:16 / 9;
+  background:#e9eff1;
+}
+
+.home-wallpaper-image{
+  display:block;
+  width:100%;
+  height:100%;
+  object-fit:cover;
+}
+
+.home-wallpaper-body{
+  padding:22px 24px 20px;
+}
+
+.home-wallpaper-body h3{
+  margin:0 0 10px;
+  color:#183b4d;
+  font-size:1.45rem;
+  line-height:1.25;
+}
+
+.home-wallpaper-description{
+  margin:0 0 17px;
+  color:#455761;
+  line-height:1.68;
+}
+
+.home-wallpaper-download-btn{
+  display:flex;
+  width:max-content;
+  margin-left:auto;
+  margin-right:0;
+  align-items:center;
+  gap:8px;
+}
+
+.home-wallpaper-download-btn svg{
+  width:17px;
+  height:17px;
+  flex:0 0 17px;
+}
+
+.home-wallpaper-controls{
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  gap:10px;
+  padding:2px 16px 18px;
+}
+
+.home-wallpaper-dots{
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  gap:8px;
+  flex-wrap:wrap;
+}
+
+.home-wallpaper-dot{
+  width:10px;
+  height:10px;
+  padding:0;
+  border:0;
+  border-radius:50%;
+  background:#b9c8cf;
+  cursor:pointer;
+  transition:transform .2s ease, background .2s ease;
+}
+
+.home-wallpaper-dot.active{
+  background:#2f6f89;
+  transform:scale(1.25);
+}
+
+.home-wallpaper-arrow{
+  width:34px;
+  height:34px;
+  display:inline-flex;
+  align-items:center;
+  justify-content:center;
+  padding:0;
+  border:0;
+  border-radius:0;
+  background:transparent;
+  color:#2f6f89;
+  cursor:pointer;
+  transition:transform .2s ease, opacity .2s ease;
+}
+
+.home-wallpaper-arrow:hover{
+  opacity:.72;
+}
+
+.home-wallpaper-arrow:active{
+  transform:scale(.88);
+}
+
+.home-wallpaper-arrow:focus-visible,
+.home-wallpaper-dot:focus-visible{
+  outline:2px solid #2f6f89;
+  outline-offset:3px;
+}
+
+.home-wallpaper-triangle{
+  display:block;
+  width:0;
+  height:0;
+}
+
+.home-wallpaper-triangle-left{
+  border-top:7px solid transparent;
+  border-bottom:7px solid transparent;
+  border-right:11px solid #2f6f89;
+  margin-left:-2px;
+}
+
+.home-wallpaper-triangle-right{
+  border-top:7px solid transparent;
+  border-bottom:7px solid transparent;
+  border-left:11px solid #2f6f89;
+  margin-right:-2px;
+}
+
+.home-wallpaper-view-all{
+  display:block;
+  width:max-content;
+  margin:14px auto 0;
+  font-weight:700;
+}
+
+@media(max-width:680px){
+  .home-wallpaper-section{
+    margin-top:32px;
+    margin-bottom:36px;
+  }
+
+  .home-wallpaper-body{
+    padding:19px;
+  }
+
+  .home-wallpaper-body h3{
+    font-size:1.28rem;
+  }
+
+  .home-wallpaper-download-btn{
+    width:100%;
+    margin-left:0;
+    margin-right:0;
+    justify-content:center;
+  }
+
+  .home-wallpaper-controls{
+    padding-left:10px;
+    padding-right:10px;
+  }
+}
+/* End homepage wallpaper slider */
+
+/* Homepage wallpaper overlay refinement */
+.home-wallpaper-image-wrap{
+  position:relative;
+}
+
+.home-wallpaper-image-wrap::after{
+  content:"";
+  position:absolute;
+  inset:0;
+  z-index:1;
+  pointer-events:none;
+  background:linear-gradient(
+    0deg,
+    rgba(10,22,30,.78) 0%,
+    rgba(10,22,30,.56) 34%,
+    rgba(10,22,30,.16) 68%,
+    rgba(10,22,30,.04) 100%
+  );
+}
+
+.home-wallpaper-overlay{
+  position:absolute;
+  inset:0;
+  z-index:2;
+  display:flex;
+  flex-direction:column;
+  align-items:flex-start;
+  justify-content:flex-end;
+  padding:clamp(22px,4vw,42px);
+  pointer-events:none;
+}
+
+.home-wallpaper-overlay h3{
+  max-width:760px;
+  margin:0 0 9px;
+  color:#fff;
+  font-size:clamp(1.6rem,3.4vw,2.65rem);
+  line-height:1.08;
+  text-shadow:0 2px 12px rgba(0,0,0,.35);
+}
+
+.home-wallpaper-overlay .home-wallpaper-description{
+  max-width:760px;
+  margin:0 0 16px;
+  color:#f4f7f8;
+  font-size:clamp(.94rem,1.45vw,1.08rem);
+  line-height:1.58;
+  text-shadow:0 1px 8px rgba(0,0,0,.32);
+}
+
+.home-wallpaper-overlay .home-wallpaper-download-btn{
+  pointer-events:auto;
+  width:max-content;
+  margin:0;
+  align-self:flex-start;
+  box-shadow:0 5px 16px rgba(0,0,0,.22);
+}
+
+@media(max-width:680px){
+  .home-wallpaper-overlay{
+    padding:18px;
+  }
+
+  .home-wallpaper-overlay h3{
+    font-size:1.45rem;
+  }
+
+  .home-wallpaper-overlay .home-wallpaper-description{
+    display:-webkit-box;
+    -webkit-line-clamp:3;
+    -webkit-box-orient:vertical;
+    overflow:hidden;
+    font-size:.9rem;
+    line-height:1.45;
+    margin-bottom:13px;
+  }
+
+  .home-wallpaper-overlay .home-wallpaper-download-btn{
+    width:max-content;
+    padding:9px 13px;
+    font-size:.88rem;
+  }
+}
+/* End homepage wallpaper overlay refinement */
+
