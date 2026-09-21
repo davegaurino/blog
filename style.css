@@ -2394,3 +2394,23 @@ h1,h2,h3,h4{
 }
 /* End homepage wallpaper overlay refinement */
 
+/* Homepage wallpaper card list matching Wallpapers page */
+.home-wallpaper-card-list{
+  display:block;
+  margin:32px 0 18px;
+}
+
+.home-wallpaper-card-list .wallpaper-entry{
+  width:100%;
+}
+
+.home-wallpaper-card-list .wallpaper-entry + .wallpaper-entry{
+  margin-top:32px;
+}
+
+.home-wallpaper-card-list .wallpaper-download-btn{
+  white-space:nowrap;
+  flex-wrap:nowrap;
+}
+/* End homepage wallpaper card list matching Wallpapers page */
+
